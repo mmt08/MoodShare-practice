@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #7c5cff;
+    --accent: #ff8fb3;
+    --dark: #1f1f2e;
+    --text: #333344;
+    --muted: #6f6f85;
+    --bg: #f7f4ff;
+    --card: rgba(255, 255, 255, 0.85);
+    --shadow: 0 20px 50px rgba(80, 60, 150, 0.15);
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #ffe0ec 0, transparent 35%),
+        radial-gradient(circle at top right, #dcd6ff 0, transparent 35%),
+        linear-gradient(135deg, #f7f4ff, #ffffff);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+header {
+    padding: 70px 20px 55px;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(135deg, rgba(124, 92, 255, 0.95), rgba(255, 143, 179, 0.9)),
+        url("../images/moodshare.jpg") center/cover;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 56px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 20px;
+    max-width: 760px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 25px rgba(60, 50, 120, 0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: white;
+    background: linear-gradient(135deg, var(--main), var(--accent));
+    transform: translateY(-2px);
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+section,
+article {
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(124, 92, 255, 0.12);
+    border-radius: 28px;
+    padding: 34px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+    transition: 0.25s;
+}
+
+section:hover,
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px rgba(80, 60, 150, 0.2);
+}
+
+h2 {
+    font-size: 34px;
+    color: var(--dark);
+    margin-bottom: 18px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 5px;
+    margin-top: 8px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--main), var(--accent));
+}
+
+h3 {
+    color: var(--main);
+    font-size: 24px;
+    margin: 18px 0 10px;
+}
+
+p {
+    margin-bottom: 14px;
+    font-size: 17px;
+}
+
+ul {
+    margin-left: 22px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+a {
+    color: var(--main);
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 28px auto 10px;
+    border-radius: 26px;
+    box-shadow: 0 18px 45px rgba(80, 60, 150, 0.22);
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    margin-top: 60px;
+    padding: 28px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, var(--dark), #4b3ca7);
+}
+
+footer p {
+    margin: 0;
+}
+
+strong {
+    color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 9px 13px;
+        font-size: 14px;
+    }
+
+    section,
+    article {
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
