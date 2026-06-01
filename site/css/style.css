@@ -181,6 +181,116 @@ strong {
     color: var(--dark);
 }
 
+.journal-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.journal-text {
+    flex: 2;
+}
+
+.journal-image {
+    flex: 1;
+}
+
+.journal-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+    .journal-card {
+        flex-direction: column;
+    }
+
+    .journal-image img {
+        max-width: 100%;
+    }
+}
+
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(124, 92, 255, 0.12);
+    transition: 0.3s;
+    border: 1px solid rgba(124, 92, 255, 0.08);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(124, 92, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    color: #2b2448;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.task-grid,
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.task-card,
+.tech-card {
+    background: linear-gradient(135deg, #ffffff, #f6f1ff);
+    border: 1px solid rgba(124, 92, 255, 0.12);
+    border-radius: 20px;
+    padding: 22px;
+    font-weight: 600;
+    box-shadow: 0 14px 30px rgba(124, 92, 255, 0.1);
+    transition: 0.3s;
+}
+
+.task-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.task-card:hover,
+.tech-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(124, 92, 255, 0.18);
+}
+
+.tech-card {
+    text-align: center;
+    color: #2b2448;
+    font-size: 18px;
+}
+
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 42px;
